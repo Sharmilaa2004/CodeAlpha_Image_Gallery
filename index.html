@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" </head>
+
+<body>
+  <center>
+    <h1>Image Gallery</h1>
+  </center><br><br><br><br>
+  <div class="container">
+    <div class="image-container">
+      <div class="image"><img src="images/1.jpg">
+        <button>Taj Mahal <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="image"><img src="images/2.png">
+        <button>Eiffel Tower <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="image"><img src="images/3.jpg">
+        <button>London Bridge <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="image"><img src="images/4.jfif">
+        <button>Alps Mountain <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="image"><img src="images/5.jfif">
+        <button>Greatt Barrier Reef <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="image"><img src="images/6.jpg">
+        <button>Lotus Temple
+          <i class="fa-solid fa-arrow-right"></i> </button>
+      </div>
+      <div class="image"><img src="images/7.jfif">
+        <button>Great wall of China <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="image"><img src="images/8.jpg">
+        <button>Burj Khalifa <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <div class="popup-image">
+      <span>&times;</span>
+      <img src="" alt="" />
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll(".image img").forEach(image => {
+      image.onclick = () => {
+        document.querySelector(".popup-image").style.display = "block";
+        document.querySelector(".popup-image img").src =
+          image.getAttribute("src");
+      };
+    });
+
+    document.querySelector(".popup-image span").onclick = () => {
+      document.querySelector(".popup-image").style.display = "none";
+    };
+
+  </script>
+</body>
+
+</html>
